@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #710d2f, #1f2251);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          
+        }
+
+        .navbar h2 {
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .other {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            background: linear-gradient(to right, #333, #333 50%, #eee 75%, #333 75%);
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .other a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .other a:hover {
+            color: #f69d3c;
+        }
+
+        .loginuser {
+            margin-top: -110px;
+            text-align: center;
+           
+        }
+
+        .icon img {
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+        }
+
+        .loginuser p {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        .loginuser p a {
+            color: #f69d3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .loginuser p a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            height: 50px;
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+        }
+
+        @media (max-width: 768px) {
+            .navbar h1 {
+                font-size: 20px;
+            }
+
+            .other {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .other a {
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar h1 {
+                font-size: 18px;
+            }
+
+            .other {
+                font-size: 16px;
+            }
+        }
+        .welcome{
+            height: 300px;
+            max-width: 100%;
+            margin-top:100px ;
+            margin-left:150px ;
+            animation: textGlow 3s ease-in-out infinite alternate-reverse;
+        }
+        .name{
+            font-size: 30px;
+
+        }
+        .greeting{
+            font-size: 30px;
+            font-weight: bold;
+            font-style: italic;
+            
+
+        }
+        @keyframes textGlow {
+            from { text-shadow: 0 0 10px #f69d3c, 0 0 20px #f69d3c, 0 0 30px #f69d3c; }
+            to { text-shadow: 0 0 20px #ffb84d, 0 0 40px #ffb84d, 0 0 60px #ffb84d; }
+        }
+        .courses{
+            margin-top: 50px;
+            margin-left: 150px;
+            
+        }
+        .bottom{
+            display: flex;
+        }
+        .next{
+            margin-top: 50px;
+            margin-left: 700px;
+
+        }
+        button{
+            font-weight: bold;
+            font-style: italic;
+            height: 50px;
+            font-size: 25px;
+            border-radius: 20px;
+            border: 5px solid lightblue;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .learn-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card {
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            background-color: #f69d3c;
+        }
+
+.card h3 {
+    margin-top: 0;
+}
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h2>AI Prompt Engineering</h2>
+    </nav>
+
+    <!-- Navigation Links -->
+    <div class="other">
+        <a href="main.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="AItools.html">AI Tools</a>
+        <a href="team.html">Team</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="Contact.html">Contact us</a>
+    </div>
+
+    <!-- User Login Section -->
+    <div class="loginuser"> 
+        <div class="icon"><img src="images/login.png" alt="User Icon"></div>
+        <p><a href="Loginpage.html">Login or Signup</a></p>
+    </div>
+
+    <div class="welcome">
+        <h1 id="element" class="name"></h1>
+        <p class="greeting">Welcome to the course</p>
+    </div>
+
+    <div class="bottom">
+        <div class="courses">
+            <button> <a href="module.html" target="_blank">Start learning prompt engineering</a> </button>
+        </div>
+    
+    
+        <div class="next">
+            <button><a href="">Hello, Add more</a></button>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <section id="about" class="section">
+        <h1 style="color: blue; font-size: 30px;"><b><i>About the Course</i></b></h1>
+        <p style="font-size: 20px;"><b><i>This course will guide you through the basics of prompt engineering, helping you create more effective prompts for AI models.</i></b></p>
+    </section>
+
+    <section id="learn" class="section">
+        <h2>What You'll Learn</h2>
+        <div class="learn-cards">
+            <div class="card">
+                <h3>Understanding Prompts</h3>
+                <p>Get to know what prompts are and how they influence AI behavior.</p>
+            </div>
+            <div class="card">
+                <h3>Google Gemini API</h3>
+                <p>Learn how to integrate and use the Google Gemini API for prompt generation.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Techniques</h3>
+                <p>Dive into advanced prompt engineering techniques to refine your skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <footer>
+        <p>&copy; 2024 AI Prompt Engineering. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Initialize Typed.js
+        var typed = new Typed('#element', {
+            strings: [ 'Hello Ashish,'],
+            typeSpeed: 50,  
+            backSpeed: 25,   
+            backDelay: 1000, 
+            startDelay: 1000, 
+            loop: true      
+        });
+
+        var typed = new Typed('#newele', {
+            strings: [ '.....'],
+            typeSpeed: 50,  
+            backSpeed: 25,   
+            backDelay: 1000, 
+            startDelay: 500, 
+            loop: true      
+        });
+    </script>
+
+</body>
+</html>
